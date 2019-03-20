@@ -6,27 +6,36 @@ import './app.scss'
 class App extends Component {
   config = {
     pages: [
-      'pages/home/index'
-
+      'pages/home/index',
+      'pages/userInfo/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    "tabBar": {
+      "color": "#858585",
+      "selectedColor": "#39b5de",
+      "borderStyle": "black",
+      "list": [
+        {
+          "pagePath": "pages/home/index",
+          "iconPath": "images/icons/mark.png",
+          "selectedIconPath": "images/icons/markHL.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/userInfo/index",
+          "iconPath": "images/icons/mine.png",
+          "selectedIconPath": "images/icons/mineHL.png",
+          "text": "个人中心"
+        }
+      ]
     }
   }
 
-  componentDidMount () {}
-
-  componentDidShow () {}
-
-  componentDidHide () {}
-
-  componentDidCatchError () {}
-
-  // 在 App 类中的 render() 函数没有实际作用
-  // 请勿修改此函数
   render () {
     return (
       <Home />
