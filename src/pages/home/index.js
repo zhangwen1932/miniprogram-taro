@@ -1,7 +1,9 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Text } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 import action from '../../utils/action';
+import ArticleCell from '../../components/articleCell/articleCell';
+
 import './index.scss';
 
 //与相应的model里的数据连接
@@ -42,12 +44,16 @@ export default class Index extends Component {
           {
             data.list.length ?
               data.list.map(item => {
-                return <View key={item._id}>
-                  <Text>{item.title}</Text>
-                </View>
+                return <ArticleCell
+                  key={item._id}
+                  title={item.title}
+                  content={item.content}
+                  likeCount={item.likeCount}
+                  commentsCount={item.commentsCount}
+                />
               })
             : 
-          <View>Hello World</View> 
+          <View>暂无数据</View> 
           }
         </View>
       </View>
