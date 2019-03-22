@@ -1,25 +1,39 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Text } from '@tarojs/components';
+import { View, Text, Image } from '@tarojs/components';
+import eyePng from '../../images/icons/eye.png'
 
-class User extends Component{
+import './style.scss';
+
+class Author extends Component{
+  config = {
+    navigationBarTitleText: '我的'
+  }
+
   render(){
     return(
-      <View className='components-page'>
-        <Text>flex-direction: row 横向布局</Text>
-        <View className='flex-wrp' style='flex-direction:row;'>
-          <View className='flex-item demo-text-1'>1</View>
-          <View className='flex-item demo-text-2'>2</View>
-          <View className='flex-item demo-text-3'>3</View>
+      <View className='author-information'>
+        <View className='user flex-wrp'>
+          <View className='avatar flex-item'>
+            <Image className='userinfo-avatar' src='https://wx2.sinaimg.cn/mw1024/9499f9e8ly1fyhrmm715tj20u00u00ti.jpg' backgroundSize='cover'></Image>
+          </View>
+          <View className='user-info flex-item'>
+            <Text className='userinfo-nickname'>墙头马</Text>
+            <Text className='edit'>查看或编辑个人主页</Text>
+          </View>
         </View>
-        <Text>flex-direction: column 纵向布局</Text>
-        <View className='flex-wrp' style='flex-direction:column;'>
-          <View className='flex-item flex-item-V demo-text-1'>1</View>
-          <View className='flex-item flex-item-V demo-text-2'>2</View>
-          <View className='flex-item flex-item-V demo-text-3'>3</View>
+        <View className='my'>
+          <View className='my-item flex-wrp'>
+            <View className='myitem-icon flex-item' >
+              <Image class='myitem-img' src={eyePng}></Image>
+            </View>
+            <View className='myitem-name flex-item'>
+              <Text>自由职业者</Text>
+            </View>
+          </View>
         </View>
       </View>
     )
   }
 }
 
-export default User;
+export default Author;

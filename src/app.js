@@ -38,14 +38,14 @@ class App extends Component {
       list: [
         {
           pagePath: "pages/home/index",
-          iconPath: "images/icons/mark.png",
-          selectedIconPath: "images/icons/markHL.png",
+          iconPath: "images/icons/index.png",
+          selectedIconPath: "images/icons/index_focus.png",
           text: "首页"
         },
         {
           pagePath: "pages/userInfo/index",
-          iconPath: "images/icons/mine.png",
-          selectedIconPath: "images/icons/mineHL.png",
+          iconPath: "images/icons/discovery.png",
+          selectedIconPath: "images/icons/discovery_focus.png",
           text: "个人中心"
         }
       ]
