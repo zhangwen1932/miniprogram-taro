@@ -7,8 +7,8 @@ import ArticleCell from '../../components/articleCell/articleCell';
 import './index.scss';
 
 //与相应的model里的数据连接
-@connect(({test, loading }) => ({
-  ...test,
+@connect(({home, loading }) => ({
+  ...home,
   ...loading,
 }))
 
@@ -24,7 +24,7 @@ export default class Index extends Component {
   }
 
   componentDidMount = () => {
-    this.props.dispatch(action("test/load"));
+    this.props.dispatch(action("home/load"));
   }
 
   // 分享
@@ -36,20 +36,21 @@ export default class Index extends Component {
   }
 
   render () {
-    const { data } = this.props;
-    console.log('data', data);
+    const { articles } = this.props;
+    articles.list.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
     return (
       <View className='index'>
         <View className='container'>
           {
-            data.list.length ?
-              data.list.map(item => {
+            articles.list.length ?
+              articles.list.map(item => {
                 return <ArticleCell
                   key={item._id}
                   title={item.title}
                   content={item.content}
                   likeCount={item.likeCount}
                   commentsCount={item.commentsCount}
+                  time={item.time}
                 />
               })
             : 

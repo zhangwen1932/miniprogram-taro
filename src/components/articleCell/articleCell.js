@@ -24,6 +24,9 @@ export default class ArticleCell extends Component {
             <View className='article-comments'>
               <View>{this.props.commentsCount}评论</View>
             </View>
+            <View className='article-time'>
+              <Text>{this.props.time}</Text>
+            </View>
           </View>
         </View>
       </View>

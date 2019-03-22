@@ -5,7 +5,15 @@ class ArticleDetail extends Component{
   render(){
     return(
       <View className='article-box'>
-        <Text>Hello World</Text>
+        <View className='article-detail'> 
+          <View className='article-title'>
+            <Text>Hello World</Text>
+          </View>
+          <View className='article-content'>
+          </View>
+          <View className='article-action'>
+          </View>
+        </View>
       </View>
     )
   }
