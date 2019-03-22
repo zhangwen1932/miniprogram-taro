@@ -1,0 +1,29 @@
+.article-box{
+  border-radius: 3px;
+  box-shadow: 0 1px 2px #bebebe;
+}
+.article-detail{
+  width: 710px;
+  padding: 40px 20px 10px;
+  background: #fff;
+  .article-title{
+    padding: 40px 20px 30px;
+    font-size: 38px;
+  }
+  .article-content{
+    padding: 0 20px;
+    font-size: 26px;
+  }
+  .article-action{
+    width: 690px;
+    padding: 10px 20px 10px;
+    font-size: 26px;
+    color: #a0acac;
+      view,div,span {
+        display: inline-block;
+        vertical-align: text-bottom;
+        padding: 0 10px 0 0;
+        font-size: 24px;
+      }
+  }
+}
