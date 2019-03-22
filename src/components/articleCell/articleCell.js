@@ -4,11 +4,14 @@ import { View, Text } from '@tarojs/components';
 import './style.scss';
 
 export default class ArticleCell extends Component {
+  navigateTo(url) {
+    Taro.navigateTo({ url: url })
+  }
   render() {
     return (
       <View className='article-cell'>
         <View className='article-container'>
-          <View className='article-title'>
+          <View className='article-title' onClick={this.navigateTo.bind(this, '/pages/articleDetail/index')}>
             <Text>{this.props.title}</Text>
           </View>
           <View className='article-content'>
