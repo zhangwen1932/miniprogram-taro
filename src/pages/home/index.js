@@ -3,7 +3,7 @@ import { View } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
 import ArticleCell from '../../components/articleCell/articleCell';
 
-import './index.scss';
+import './style.scss';
 
 //与相应的model里的数据连接
 @connect(({home, loading }) => ({
@@ -38,8 +38,6 @@ export default class Index extends Component {
 
   render () {
     const { articles } = this.props;
-    // const data = [...articles.list];
-    // articles.list.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
     return (
       <View className='index'>
         <View className='container'>
