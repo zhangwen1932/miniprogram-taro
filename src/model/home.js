@@ -6,7 +6,7 @@ export default {
   namespace: 'home',
   state: { articles: [] },
   reducers: {
-    save(state, {payload}) {
+    save(state, { payload }) {
       return {...state, ...payload};
     }
   },

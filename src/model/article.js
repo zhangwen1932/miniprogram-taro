@@ -16,7 +16,6 @@ export default {
   },
   effects: {
     * getArticleDetail({payload},{call, put}) {
-      console.log('payload', payload);
       const id = payload.id;
       const { data } = yield call(request, {
         url: `http://127.0.0.1:9100/api/admin/article/getArticlesDetail?id=${id}`
