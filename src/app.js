@@ -23,7 +23,8 @@ class App extends Component {
     pages: [
       'pages/home/index',
       'pages/userInfo/index',
-      'pages/articleDetail/index'
+      'pages/articleDetail/index',
+      'pages/test/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -47,6 +48,12 @@ class App extends Component {
           iconPath: "images/icons/discovery.png",
           selectedIconPath: "images/icons/discovery_focus.png",
           text: "个人中心"
+        },
+        {
+          pagePath: "pages/test/index",
+          iconPath: "images/icons/ring.png",
+          selectedIconPath: "images/icons/ring_focus.png",
+          text: "测试登录"
         }
       ]
     }

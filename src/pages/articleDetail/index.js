@@ -1,6 +1,9 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Text } from '@tarojs/components';
+import { View, Text, Image } from '@tarojs/components';
 import { connect } from '@tarojs/redux';
+
+import heartPng from '../../images/icons/heart2.png';
+import writePng from '../../images/icons/write.png';
 
 import './style.scss';
 
@@ -38,11 +41,21 @@ class ArticleDetail extends Component{
           <View className='article-title'>
             <Text>{this.props.title}</Text>
           </View>
+          <View className='article-time'>
+            <Text>{this.props.time}</Text>
+          </View>
           <View className='article-content'>
             <Text>{this.props.content}</Text>
           </View>
-          <View className='article-action'>
-            <Text>{this.props.time}</Text>
+          <View className='article-operate flex-wrp'>
+            <View className='article-like flex-item'>
+              <Image src={heartPng}></Image>
+              <Text>点赞</Text>
+            </View>
+            <View className='article-comment flex-item'>
+              <Image src={writePng}></Image>
+              <Text>写评论</Text>
+            </View>
           </View>
         </View>
       </View>

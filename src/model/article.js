@@ -20,7 +20,6 @@ export default {
       const { data } = yield call(request, {
         url: `http://127.0.0.1:9100/api/admin/article/getArticlesDetail?id=${id}`
       });
-      console.log('data', data);
       yield put(action(
         "save",
         {
