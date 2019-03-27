@@ -27,7 +27,6 @@ class Author extends Component{
   }
 
   render(){
-    console.log('this.props', this.props);
     return(
       <View className='author-information'>
         <View className='user flex-wrp'>

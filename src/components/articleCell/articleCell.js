@@ -5,7 +5,6 @@ import './style.scss';
 
 export default class ArticleCell extends Component {
   gotoDetail = () => {
-    console.log('this.props.key', this.props.indexId);
     Taro.navigateTo({
       url: `/pages/articleDetail/index?id=${this.props.indexId}`,
     });
